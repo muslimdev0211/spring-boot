@@ -30,7 +30,7 @@ public class FileStorageResource {
         return ResponseEntity.ok(multipartFile.getOriginalFilename() + "Saving Completed");
 
     }
-    @DeleteMapping ("/upload/{hashId}")
+    @DeleteMapping ("/preview/{hashId}")
     public ResponseEntity delete(@PathVariable String hashId){
         FileStorage fileStorage = fileStorageService.findByHashId(hashId);
         Long id = fileStorage.getId();
